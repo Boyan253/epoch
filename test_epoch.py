@@ -20,3 +20,13 @@ def test_from_timestamp_utc():
     assert unit == "s"
     assert moment.year == 1970
     assert moment.tzinfo == timezone.utc
+
+
+def test_milliseconds_and_seconds_agree():
+    a, _ = epoch.from_timestamp(1763000000)
+    b, _ = epoch.from_timestamp(1763000000000)
+    assert a == b
+
+def test_parse_human_iso():
+    moment = epoch.parse_human("2026-01-02T03:04:05")
+    assert (moment.year, moment.month, moment.day) == (2026, 1, 2)
