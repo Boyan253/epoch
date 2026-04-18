@@ -30,3 +30,11 @@ def test_milliseconds_and_seconds_agree():
 def test_parse_human_iso():
     moment = epoch.parse_human("2026-01-02T03:04:05")
     assert (moment.year, moment.month, moment.day) == (2026, 1, 2)
+
+
+def test_parse_human_plain_date():
+    assert epoch.parse_human("2026-01-02").hour == 0
+
+def test_parse_human_rejects_nonsense():
+    with pytest.raises(ValueError):
+        epoch.parse_human("not a date")
