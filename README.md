@@ -16,3 +16,12 @@ python epoch.py 1763000000000 --tz Europe/Sofia   # ms detected automatically
 python epoch.py "2026-01-02 15:30" --tz UTC       # the other direction
 python epoch.py now --ms
 ```
+
+## Output
+
+```
+unix     1763000000
+iso      2025-11-13T04:53:20+02:00
+local    2025-11-13 04:53:20 EET
+utc      2025-11-13 02:53:20 UTC
+```
