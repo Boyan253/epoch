@@ -25,3 +25,14 @@ iso      2025-11-13T04:53:20+02:00
 local    2025-11-13 04:53:20 EET
 utc      2025-11-13 02:53:20 UTC
 ```
+
+## Unit detection
+
+The magnitude of the number decides the unit, so you do not have to:
+
+| digits | read as |
+|--------|---------|
+| 10     | seconds |
+| 13     | milliseconds |
+| 16     | microseconds |
+| 19     | nanoseconds |
