@@ -36,3 +36,8 @@ The magnitude of the number decides the unit, so you do not have to:
 | 13     | milliseconds |
 | 16     | microseconds |
 | 19     | nanoseconds |
+
+## Accepted date formats
+
+ISO 8601 (with or without `Z`/offset), `YYYY-MM-DD HH:MM:SS`, `YYYY-MM-DD`,
+`DD/MM/YYYY`, and `now`. A date without an offset is interpreted in `--tz`.
