@@ -41,3 +41,10 @@ The magnitude of the number decides the unit, so you do not have to:
 
 ISO 8601 (with or without `Z`/offset), `YYYY-MM-DD HH:MM:SS`, `YYYY-MM-DD`,
 `DD/MM/YYYY`, and `now`. A date without an offset is interpreted in `--tz`.
+
+## Tests
+
+```
+pip install pytest
+pytest
+```
