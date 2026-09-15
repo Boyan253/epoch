@@ -5,6 +5,8 @@ import argparse
 import sys
 from datetime import datetime, timezone
 
+__version__ = "0.1.0"
+
 try:
     from zoneinfo import ZoneInfo
 except ImportError:
@@ -72,6 +74,8 @@ def parse_human(text, tz=None):
 
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--version", action="version",
+                    version="%(prog)s " + __version__)
     ap.add_argument("value", nargs="?", default="now",
                     help="a unix timestamp, a date, or 'now'")
     ap.add_argument("--tz", default="UTC", help="IANA timezone, e.g. Europe/Sofia")

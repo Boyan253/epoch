@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "epoch"
+version = "0.1.0"
+description = "Convert between unix timestamps and human dates in any timezone, both directions."
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+classifiers = [
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://github.com/Boyan253/epoch"
+
+[project.scripts]
+epoch = "epoch:main"
+
+[tool.setuptools]
+py-modules = ["epoch"]
